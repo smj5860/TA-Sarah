@@ -8,4 +8,8 @@ public class Item {
         this.desc = desc;
         this.value = value;
     }
+
+    public String toString(){
+        return String.format("%s \n=====\n %s \nValue: %d \n", this.name, this.desc, this.value);
+    }
 }
