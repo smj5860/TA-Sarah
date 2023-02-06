@@ -10,17 +10,12 @@ public class Main {
             Mace bigMace = new Mace();
 
 
-            Ogre greenOgre = new Ogre();
-            Ogre redOgre = new Ogre();
-            Zombie slowZombie = new Zombie();
-            Zombie fastZombie = new Zombie();
-            Dog spotDog = new Dog();
-            Hyenas slyHyenas = new Hyenas();
-
-
-
-
-
+            Ogre greenOgre = new Ogre(10);
+            Ogre redOgre = new Ogre(15);
+            Zombie slowZombie = new Zombie(4);
+            Zombie fastZombie = new Zombie(8);
+            Dog spotDog = new Dog(15);
+            Hyenas slyHyenas = new Hyenas(7);
 
         }
 }

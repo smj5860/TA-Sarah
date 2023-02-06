@@ -1,7 +1,9 @@
 public class Ogre extends Enemy{
 
-    public Ogre(){
+    private int size;
+    public Ogre(int size){
 
         super("Ogre", 30, 20);
+        this.size = size;
     }
 }
