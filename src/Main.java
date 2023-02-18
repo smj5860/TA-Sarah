@@ -17,5 +17,14 @@ public class Main {
             Dog spotDog = new Dog(15);
             Hyenas slyHyenas = new Hyenas(7);
 
+            Flee flee = new Flee();
+            ViewInventory viewinventory = new ViewInventory();
+            MoveEast moveeast = new MoveEast();
+            MoveNorth movenorth = new MoveNorth();
+            MoveSouth movesouth = new MoveSouth();
+            MoveWest movewest = new MoveWest();
+            Run run = new Run();
+
+
         }
 }

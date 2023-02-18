@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5f3a871-7d2d-49a9-97b1-8f2dc906c5ec" name="Changes" comment="TA-Sarah1">
+    <list default="true" id="b5f3a871-7d2d-49a9-97b1-8f2dc906c5ec" name="Changes" comment="Enemy">
+      <change afterPath="$PROJECT_DIR$/src/Action.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Flee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Method.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MoveEast.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MoveNorth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MoveSouth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MoveWest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Run.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ViewInventory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GiantSpider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GiantSpider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hyenas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hyenas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ogre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ogre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Zombie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Zombie.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +25,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -43,7 +48,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/rhjsn/IdeaProjects/TA-Sarah&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/rhjsn/IdeaProjects/Storefront&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
@@ -98,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675281778936</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Enemy">
+      <created>1675653034883</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675653034883</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -117,6 +129,7 @@
     <MESSAGE value="TA" />
     <MESSAGE value="TA-Sarah" />
     <MESSAGE value="TA-Sarah1" />
-    <option name="LAST_COMMIT_MESSAGE" value="TA-Sarah1" />
+    <MESSAGE value="Enemy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Enemy" />
   </component>
 </project>
