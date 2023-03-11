@@ -25,6 +25,9 @@ public class Main {
             MoveWest movewest = new MoveWest();
             Run run = new Run();
 
+            World world = new World();
+            world.load_tiles();
+
 
         }
 }
