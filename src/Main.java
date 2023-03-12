@@ -26,7 +26,7 @@ public class Main {
             Run run = new Run();
 
             World world = new World();
-            world.load_tiles();
+            world.load_titles();
 
 
         }
