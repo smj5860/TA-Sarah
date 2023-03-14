@@ -14,7 +14,7 @@ public class MapTile {
         int result =1;
         result = prime * result + x;
         result = prime * result + y;
-        return result;
+        return prime;
     }
 
     @Override
@@ -33,6 +33,21 @@ public class MapTile {
         return true;
     }
     public String intro_text() {throw new UnsupportedOperationException();}
+
+    public ArrayList<Action> adjacent_moves() {
+        ArrayList<Action> moves = new ArrayList<Action>();
+        {
+            if (World.title_exists(x, y+1) !=null)
+                moves.add(new MoveEast());
+            if (World.title_exists(x, y-1) !=null)
+                moves.add(new MoveWest());
+            if (World.title_exists(x+1, y) !=null)
+                moves.add(new MoveNorth());
+            if (World.title_exists(x-1, y) !=null)
+                moves.add(new MoveSouth());
+        }
+        return moves;
+    }
 
 
 }
