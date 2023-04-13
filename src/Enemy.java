@@ -2,7 +2,7 @@ public class Enemy {
 
     protected String name;
     protected int hp;
-    protected int damage;
+    protected static int damage;
 
     public Enemy(String name, int hp, int damage){
         this.name = name;

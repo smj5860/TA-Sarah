@@ -8,6 +8,7 @@ public class Main {
             Sword magicSword = new Sword();
             Pillow softPillow = new Pillow();
             Mace bigMace = new Mace();
+            Arrow sharpArrow = new Arrow();
 
 
             Ogre greenOgre = new Ogre(10);
@@ -26,7 +27,9 @@ public class Main {
             Run run = new Run();
 
             World world = new World();
-            world.load_titles();
+            world.load_tiles();
+
+
 
 
         }

@@ -1,4 +1,5 @@
-public class Action {
+import java.awt.*;
+public class Action extends Point {
 
     private Method method;
     private char hotkey;
@@ -15,6 +16,8 @@ public class Action {
 
     private Enemy kwargs;
 
+    public Enemy getKwargs() {return kwargs;}
+
     public void setKwargs(Enemy kwargs) {this.kwargs = kwargs;}
 
     public Action(Method method, String name, char hotkey, Enemy kwargs ){
@@ -26,4 +29,6 @@ public class Action {
 
     public String str() {return hotkey + ": " + name;}
 
-}
+
+    }
+

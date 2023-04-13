@@ -1,20 +1,38 @@
+import java.awt.Point;
 import java.util.*;
 public class MapTile {
-    int x;
-    int y;
+    private int x;
+    private int y;
 
-    public MapTile(int x, int y) {
+
+    public int getX(){
+        return x;
+    }
+
+    public void setX(int x) {
         this.x = x;
+    }
+
+    public int getY(){
+        return y;
+    }
+
+    public void setY(int y) {
         this.y = y;
     }
 
+    public MapTile(int x,int y){
+        this.x = x;
+        this.y = y;
+
+    }
     @Override
     public int hashCode() {
         final int prime = 31;
-        int result =1;
+        int result = 1;
         result = prime * result + x;
         result = prime * result + y;
-        return prime;
+        return result;
     }
 
     @Override
@@ -32,22 +50,30 @@ public class MapTile {
             return false;
         return true;
     }
-    public String intro_text() {throw new UnsupportedOperationException();}
-
     public ArrayList<Action> adjacent_moves() {
-        ArrayList<Action> moves = new ArrayList<Action>();
-        {
-            if (World.title_exists(x, y+1) !=null)
-                moves.add(new MoveEast());
-            if (World.title_exists(x, y-1) !=null)
-                moves.add(new MoveWest());
-            if (World.title_exists(x+1, y) !=null)
-                moves.add(new MoveNorth());
-            if (World.title_exists(x-1, y) !=null)
-                moves.add(new MoveSouth());
-        }
+        ArrayList<Action> moves = new ArrayList<>();
+        if(World.tile_exists(x,y+1)!=null)
+            moves.add(new MoveEast());
+        if(World.tile_exists(x+1,y)!=null)
+            moves.add(new MoveSouth());
+        if(World.tile_exists(x,y-1)!=null)
+            moves.add(new MoveWest());
+        if(World.tile_exists(x-1,y)!=null)
+            moves.add(new MoveNorth());
+
         return moves;
     }
 
+    public ArrayList<Action> adjacent_actions(){
+        ArrayList<Action> actions = new ArrayList<>();
+        actions.addAll(adjacent_moves());
+        actions.add(new ViewInventory());
+        return actions;
+    }
+    public String intro_text() {
+        return null;
+    }
 
+    public void modify_player(Player player) {
+    }
 }
