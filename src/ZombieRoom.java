@@ -9,7 +9,7 @@ public class ZombieRoom extends EnemyRoom {
 
     public String intro_text() {
         if (zombie.is_alive()) {
-            return "As you enter, zombies appear from the shadows, eyes fixed and shuffling towards you.";
+            return "As you enter, zombies appear from the shadows, eyes fixed and shuffling towards you.\n";
         } else {
             return "The corpse of zombies lies on the ground";
         }
@@ -19,7 +19,7 @@ public class ZombieRoom extends EnemyRoom {
     public void modify_player(Player player) {
         if (zombie.is_alive()) {
             player.hp = (short) (player.hp - zombie.damage);
-            System.out.printf("The Enemy you are facing does %d Damage. You have %d Health Remaining...", zombie.damage, player.hp);
+            System.out.printf("\nThe Enemy you are facing does %d Damage. You have %d Health Remaining...", zombie.damage, player.hp);
 
         }
 

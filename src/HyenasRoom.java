@@ -9,7 +9,7 @@ public class HyenasRoom extends EnemyRoom {
 
     public String intro_text() {
         if (slyhyenas.is_alive()) {
-            return "As you enter, the distant howls of hyenas reach your ears." + "\n A pack of snarling hyenas with sharp teeth enter the room";
+            return "As you enter, the distant howls of hyenas reach your ears." + "\nA pack of snarling hyenas with sharp teeth enter the room";
         } else {
             return "The corpse of Hyenas litter the ground";
         }

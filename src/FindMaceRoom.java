@@ -6,6 +6,6 @@ public class FindMaceRoom extends LootRoom{
     }
 
     public String intro_text(){
-        return "You see something that is sturdy and heavy, with a spiked ball that looks lethal.\n You feel its weight, imagining the damage it could inflict upon your enemies.\n";
+        return "You see something that is sturdy and heavy, with a spiked ball that looks lethal.\nYou feel its weight, imagining the damage it could inflict upon your enemies.\n";
     }
 }

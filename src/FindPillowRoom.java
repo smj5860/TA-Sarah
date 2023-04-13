@@ -6,6 +6,7 @@ public class FindPillowRoom extends LootRoom{
     }
 
     public String intro_text(){
-        return "You spot something on the floor.\n";
+        return "You spot something soft on the floor. As you approach, you realize it's a pillow. " +
+                "You pick it up, thinking it could come in handy during your adventure.\n";
     }
 }

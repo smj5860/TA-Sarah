@@ -1,6 +1,6 @@
-EmptyCaveRoom	GiantSpiderRoom	LeaveCaveRoom	ZombieRoom	EmptyCaveRoom
-FindArrowRoom	DogRoom	EmptyCaveRoom	FindSwordRoom	FindPillowRoom
-ZombieRoom	FindSwordRoom	HyenasRoom	EmptyCaveRoom	OgreRoom
-TreasureRoom	DogRoom	FindPillowRoom	EmptyCaveRoom	ZombieRoom
-HyenasRoom	FindArrowRoom	EmptyCaveRoom	FindMaceRoom	GiantSpiderRoom
-OgreRoom	TreasureRoom	StartingRoom	TreasureRoom	FindSwordRoom
+FindPillowRoom	GiantSpiderRoom	EmptyCaveRoom	LeaveCaveRoom	OgreRoom
+DogRoom	FindArrowRoom	FindMaceRoom	EmptyCaveRoom	ZombieRoom
+FindSwordRoom	EmptyCaveRoom	HyenasRoom	GiantSpiderRoom	TreasureRoom
+OgreRoom	ZombieRoom	FindArrowRoom	HyenasRoom	EmptyCaveRoom
+GiantSpiderRoom	FindPillowRoom	EmptyCaveRoom	DogRoom	FindSwordRoom
+FindMaceRoom	TreasureRoom	StartingRoom	FindArrowRoom	HyenasRoom

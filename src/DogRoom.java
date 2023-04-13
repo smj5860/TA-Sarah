@@ -16,7 +16,7 @@ public class DogRoom extends EnemyRoom {
                 if (rottweiler.is_alive()) {
                         player.hp = (short) (player.hp - rottweiler.damage);
 
-                        System.out.printf("The Enemy you are facing does %d Damage. You have %d Health Remaining...", rottweiler.damage, player.hp);
+                        System.out.printf("The Enemy you are facing does %d Damage. You have %d Health Remaining...\n", rottweiler.damage, player.hp);
 
 
                 }
