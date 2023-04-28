@@ -67,12 +67,16 @@ public class MapTile {
     public ArrayList<Action> adjacent_actions(){
         ArrayList<Action> actions = new ArrayList<>();
         actions.addAll(adjacent_moves());
+        actions.add(new Attack(Method.Attack, "Attack", 'a', null));
+        actions.add(new Flee());
+        actions.add(new Run());
         actions.add(new ViewInventory());
         return actions;
     }
     public String intro_text() {
         return null;
     }
+
 
     public void modify_player(Player player) {
     }

@@ -1,9 +1,9 @@
 public class WeaponRoom extends MapTile{
     private Weapon weapon;
 
-    public WeaponRoom(int x, int y, Sword magicSword){
+    public WeaponRoom(int x, int y, Crossbow magicCrossbow){
         super(x,y);
-        this.weapon = magicSword;
+        this.weapon = magicCrossbow;
 
     }
 
@@ -13,7 +13,7 @@ public class WeaponRoom extends MapTile{
         }else
             the_player.inventory.add(weapon);
 
-        System.out.printf("You receive %s. You now do %d damage...", weapon.getName(), weapon.getDamage());;
+        System.out.printf("You hear a faint whisper as you take the %s. You now do %d damage...\n", weapon.getName(), weapon.getDamage());;
     }
 
 

@@ -6,7 +6,7 @@ public class TreasureRoom extends LootRoom {
 
     public String intro_text() {
         if (pickedItem == false)
-            return String.format("You have entered a treasure room.\nYour eyes are immediately drawn to the shining gold bar.\n");
+            return String.format("As you step into the room, you feel a cold breeze. You look around and see a dusty treasure in the corner.\nYour eyes are immediately drawn to a gleaming gold bar.\n");
         else
             return "";
     }

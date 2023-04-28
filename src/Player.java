@@ -11,10 +11,11 @@ public class Player implements Comparable<Player> {
     //Item inventory[];
     int hp;
     String name;
-    public int compareTo(Player Plyr)
-    {
+
+    public int compareTo(Player Plyr) {
         return Plyr.score.compareTo(this.score);
     }
+
     public String getName() {
         return name;
     }
@@ -33,17 +34,17 @@ public class Player implements Comparable<Player> {
 
     int plyrGold;
     Integer score;
-    Boolean	 victory;
+    Boolean victory;
     int location_x, location_y;
-    int prevLocatnX,prevLocatnY;
+    int prevLocatnX, prevLocatnY;
     ArrayList<Item> inventory = new ArrayList<Item>();
 
     //Constructor method
-    public Player(String name){
+    public Player(String name) {
         super();
-        this.name= name;
+        this.name = name;
         inventory.add(new Gold(15));
-        inventory.add(new Pillow());
+        inventory.add(new Dagger());
 
         this.hp = 140; // Health Points
         this.location_x = World.Starting_Position.x;
@@ -55,29 +56,20 @@ public class Player implements Comparable<Player> {
         // TODO Auto-generated constructor stub
     }
 
-    //	public void flee(MapTile tile){
-//	    //Moves the player randomly to an adjacent tile
-//        ArrayList<MapTile> available_moves = tile.adjacent_moves();
-//        //r = random.randint(0, len(available_moves) - 1);
-//        Random r = new Random();
-//        //do_action(available_moves[r]);
-//	}
-//
-    public boolean is_alive(){
+    public boolean is_alive() {
         return (hp > 0);   //Greater than zero value then you are still alive
     }
+
     //
-    public void print_inventory(){
-        int totalGold=0;Gold geld=null ;
-        for (Item item: inventory){
-            if(!(item instanceof Gold))
-            {
+    public void print_inventory() {
+        int totalGold = 0;
+        Gold geld = null;
+        for (Item item : inventory) {
+            if (!(item instanceof Gold)) {
 
                 System.out.println(item.toString());
-            }
-            else
-            {
-                geld = (Gold)item;
+            } else {
+                geld = (Gold) item;
                 totalGold += geld.amt;
             }
 
@@ -87,17 +79,14 @@ public class Player implements Comparable<Player> {
         System.out.println(gold.toString());
     }
 
-    public void updateGold()
-    {
-        int totalGold=0;Gold geld=null ;
-        for (Item item: inventory){
-            if(!(item instanceof Gold))
-            {
+    public void updateGold() {
+        int totalGold = 0;
+        Gold geld = null;
+        for (Item item : inventory) {
+            if (!(item instanceof Gold)) {
 
-            }
-            else
-            {
-                geld = (Gold )item;
+            } else {
+                geld = (Gold) item;
                 totalGold += geld.amt;
             }
 
@@ -107,28 +96,25 @@ public class Player implements Comparable<Player> {
 
     }
 
-    public void writeToFile()
-    {
+    public void writeToFile() {
         updateGold();
         try {
             File fw = new File("Scores.txt");
-            if(!fw.exists() )
-            {
+            if (!fw.exists()) {
                 fw.createNewFile();
             }
 
-            FileWriter fobj= new FileWriter(fw,true);
+            FileWriter fobj = new FileWriter(fw, true);
             PrintWriter pobj = new PrintWriter(fobj);
-            pobj.println(name+"\t"+plyrGold);
+            pobj.println(name + "\t" + plyrGold);
 
             pobj.close();
             fobj.close();
             FileReader frdr = new FileReader(fw);
-            BufferedReader brdr= new BufferedReader(frdr);
+            BufferedReader brdr = new BufferedReader(frdr);
             String entry = "";
             ArrayList<Player> plyrs = new ArrayList<Player>();
-            while((entry=brdr.readLine()) != null)
-            {
+            while ((entry = brdr.readLine()) != null) {
                 String arr[] = entry.split("\t");
                 Player plyr = new Player();
                 plyr.setName(arr[0]);
@@ -137,22 +123,19 @@ public class Player implements Comparable<Player> {
             }
 
             Collections.sort(plyrs);
-            for(Player p:plyrs)
-            {
-                System.out.println("Name:"+p.getName()+"    Score:"+p.getScore());
+            for (Player p : plyrs) {
+                System.out.println("Name:" + p.getName() + "    Score:" + p.getScore());
 
             }
 
-        }
-        catch(IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
 
     }
 
-    public void move(int dx, int dy){
+    public void move(int dx, int dy) {
         prevLocatnX = location_x;
         prevLocatnY = location_y;
         location_x += dx;
@@ -160,83 +143,87 @@ public class Player implements Comparable<Player> {
         System.out.print(World.tile_exists(location_x, location_y).intro_text());
     }
 
-    public void move_north(){
-        move(-1,0);
+    public void move_north() {
+        move(-1, 0);
     }
 
-    public void move_south(){
-        move(1,0);
+    public void move_south() {
+        move(1, 0);
     }
 
-    public void move_east(){
-        move(0,1);
+    public void move_east() {
+        move(0, 1);
     }
 
-    public void move_west(){
-        move(0,-1);
+    public void move_west() {
+        move(0, -1);
     }
 
-    public void doFlee(MapTile mp)
-    {
+    public void doFlee(MapTile mp) {
+        System.out.println("You don't waste any time and slamming the door shut, you flee the room as fast as you can..");
         ArrayList<Action> available_moves = mp.adjacent_moves();
-        Random rn=new Random();
-        int random=rn.nextInt(available_moves.size());
-        Action randomAction=available_moves.get(random);
+        Random rn = new Random();
+        int random = rn.nextInt(available_moves.size());
+        Action randomAction = available_moves.get(random);
         do_action(randomAction, null, null);
 
     }
+    public void doRun(MapTile mp) {
+        System.out.println("You run in a random direction!");
+        ArrayList<Action> available_moves = World.tile_exists(location_x, location_y).adjacent_moves();
+        Random rn = new Random();
+        int random = rn.nextInt(available_moves.size());
+        Action randomAction = available_moves.get(random);
+        do_action(randomAction, null, null);
+    }
 
-    public void attackEnemy(Enemy enemy)
-    {
-        Weapon best_weapon = new Weapon("None", "None", 0, 0);
-        int max_dmg = 0;
-        for (Item i:inventory){
-            if (i instanceof Weapon){
-                Weapon wpn = (Weapon)i;
-                if (wpn.getDamage() > max_dmg){
-                    max_dmg = wpn.getDamage();
-                    best_weapon = wpn;
+
+    public void attackEnemy(Enemy enemy) {
+        if (enemy != null) {
+            Weapon best_weapon = new Weapon("None", "None", 0, 0);
+            int max_dmg = 0;
+            for (Item i : inventory) {
+                if (i instanceof Weapon) {
+                    Weapon wpn = (Weapon) i;
+                    if (wpn.getDamage() > max_dmg) {
+                        max_dmg = wpn.getDamage();
+                        best_weapon = wpn;
+                    }
                 }
+            } //End Code block for loop
+            System.out.printf("You use %s against %s!", best_weapon.name, enemy.name);
+            enemy.hp -= best_weapon.getDamage();
+            if (!enemy.is_alive()) {
+                System.out.printf("You killed %s!", enemy.name);
+            } else {
+                System.out.printf("%s HP is %d.", enemy.name, enemy.hp);
             }
-        } //End Code block for loop
-        System.out.printf("You use %s against %s!",best_weapon.name, enemy.name);
-        enemy.hp -= best_weapon.getDamage();
-        if (!enemy.is_alive()){
-            System.out.printf("You killed %s!",enemy.name);
-        }else{
-            System.out.printf("%s HP is %d.",enemy.name, enemy.hp);
+        } else {
+            System.out.println("There is no enemy to attack.");
         }
     }
 
-    public void do_action(Action action, Enemy kwargs,MapTile mp){
-        if(kwargs == null)
-        {
-            if(action instanceof MoveEast)
-            {
+
+    public void do_action(Action action, Enemy kwargs, MapTile mp) {
+        if (kwargs == null) {
+            if (action instanceof MoveEast) {
                 move_east();
-            }else if (action instanceof MoveWest)
-            {
+            } else if (action instanceof MoveWest) {
                 move_west();
-            }else if (action instanceof MoveNorth)
-            {
+            } else if (action instanceof MoveNorth) {
                 move_north();
-            }else if (action instanceof MoveSouth)
-            {
+            } else if (action instanceof MoveSouth) {
                 move_south();
-            }else if (action instanceof ViewInventory)
-            {
+            } else if (action instanceof ViewInventory) {
                 print_inventory();
-            }else if (action instanceof Flee)
-            {
+            } else if (action instanceof Flee) {
                 doFlee(mp);
+            } else if (action instanceof Run) {
+                doRun(mp);
+            } else if (action instanceof Attack) {
+                attackEnemy(kwargs);
             }
-
         }
-        else if (action instanceof Attack)
-        {
-            attackEnemy(kwargs);
-        }
+    }
+}
 
-    } //End Code block do_attack method*/
-
-} //End Code block class

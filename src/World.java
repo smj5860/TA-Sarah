@@ -53,47 +53,48 @@ public class World {
                     mt = new TreasureRoom(x,y, new Gold(30));
                     mt = checkRoomExists(mt);
                     break;
-                case "OgreRoom":
-                    mt = new OgreRoom(x,y,new Ogre(10));
+                case "DemonRoom":
+                    mt = new DemonRoom(x,y,new Demon(10));
                     mt = checkRoomExists(mt);
                     break;
                 case "ZombieRoom":
                     mt = new ZombieRoom(x,y,new Zombie(5));
                     mt = checkRoomExists(mt);
                     break;
-                case "EmptyCavePath":
-                    mt = new EmptyCaveRoom(x,y);
+                case "EmptyHallwayRoom":
+                    mt = new EmptyHallwayRoom(x,y);
                     mt = checkRoomExists(mt);
                     break;
-                case "DogRoom":
-                    mt = new DogRoom(x,y,new Dog(8));
+                case "PoltergeistRoom":
+                    mt = new PoltergeistRoom(x,y,new Poltergeist(8));
                     mt = checkRoomExists(mt);
                     break;
-                case "HyenasRoom":
-                    mt = new HyenasRoom(x,y,new Hyenas(5));
+                case "GhostRoom":
+                    mt = new GhostRoom(x,y,new Ghost(5));
                     mt = checkRoomExists(mt);
                     break;
-                case "GiantSpiderRoom":
-                    mt = new GiantSpiderRoom(x,y, new GiantSpider(10));
+                case "PossessedObjectsRoom":
+                    mt = new PossessedObjectsRoom(x,y, new PossessedObjects(10));
                     mt = checkRoomExists(mt);
                     break;
-                case "LeaveCaveRoom":
-                    mt = new LeaveCaveRoom(x,y);
+                case "LeaveHallwayRoom":
+                    mt = new LeaveHallwayRoom(x,y);
                     mt = checkRoomExists(mt);
                     break;
-                case "FindArrowRoom":
-                    mt = new FindArrowRoom(x,y,new Arrow());
-                    mt = checkRoomExists(mt);
-                case "FindPillowRoom":
-                    mt = new FindPillowRoom(x,y,new Pillow());
+                case "FindHolyWaterRoom":
+                    mt = new FindHolyWaterRoom(x,y,new HolyWater());
                     mt = checkRoomExists(mt);
                     break;
-                case "FindSwordRoom":
-                    mt = new FindSwordRoom(x,y,new Sword());
+                case "FindDaggerRoom":
+                    mt = new FindDaggerRoom(x,y,new Dagger());
                     mt = checkRoomExists(mt);
                     break;
-                case "FindMaceRoom":
-                    mt = new FindMaceRoom(x,y,new Mace());
+                case "FindCrossbowRoom":
+                    mt = new FindCrossbowRoom(x,y,new Crossbow());
+                    mt = checkRoomExists(mt);
+                    break;
+                case "FindShotgunRoom":
+                    mt = new FindShotgunRoom(x,y,new Shotgun());
                     mt = checkRoomExists(mt);
                     break;
             }

@@ -30,5 +30,5 @@ public class Action extends Point {
     public String str() {return hotkey + ": " + name;}
 
 
-    }
+}
 
