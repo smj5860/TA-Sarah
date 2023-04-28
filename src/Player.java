@@ -118,7 +118,7 @@ public class Player implements Comparable<Player> {
                 String arr[] = entry.split("\t");
                 Player plyr = new Player();
                 plyr.setName(arr[0]);
-                plyr.setScore(Integer.parseInt(arr[1]));
+                plyr.setScore(Integer.parseInt(arr[1].trim()));
                 plyrs.add(plyr);
             }
 
