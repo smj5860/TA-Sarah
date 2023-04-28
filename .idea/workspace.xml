@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5f3a871-7d2d-49a9-97b1-8f2dc906c5ec" name="Changes" comment="TA">
-      <change afterPath="$PROJECT_DIR$/src/StartingRoom.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DogRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DogRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FindMaceRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FindMaceRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FindPillowRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FindPillowRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HyenasRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HyenasRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OgreRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OgreRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ZombieRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ZombieRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/map.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/map.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +52,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "jdk.selected.JAVA_MODULE": "openjdk-19",
-    "last_opened_file_path": "C:/Users/rhjsn/IdeaProjects/TA-Sarah/src",
+    "last_opened_file_path": "C:/Users/rhjsn/IdeaProjects/TA-Sarah",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -169,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681361664102</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="TA">
+      <created>1681405703823</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681405703823</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
